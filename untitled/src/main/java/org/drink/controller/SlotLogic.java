@@ -230,8 +230,9 @@ public class SlotLogic implements ISlot {
     }
 
     /**
-     * @param item
-     * @param count
+     * Add coins
+     * @param item coin based on his value
+     * @param count numbers of coins that will be added
      */
     private void addCoinInSlot(int item, int count) {
         for (Coin coinItem : coinObjMap.values()) {
@@ -244,7 +245,7 @@ public class SlotLogic implements ISlot {
     /**
      * Method to remove the coin from the Map
      *
-     * @param item
+     * @param item coin based on his value
      * @param removeCoinCount
      */
     private void removeCoinInSlot(int item, int removeCoinCount) {

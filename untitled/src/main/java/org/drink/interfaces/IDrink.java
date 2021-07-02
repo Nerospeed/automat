@@ -21,9 +21,13 @@ public interface IDrink {
         public int getValue() {
             return value;
         }
+
     }
 
-    public String getMessage();
-
     public List<Integer> getChangeList();
+    public boolean isDrinkBought();
+    public int getPrice();
+    public void setPrice(int price);
+    public void setDrinkBought(boolean drinkBought);
+    public void setChangeList(List<Integer> changeList);
 }

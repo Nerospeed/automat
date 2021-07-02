@@ -1,9 +1,8 @@
-package org.drink.interfaces;
+package org.drink.coin;
 
-/**
- * @author Dennis Martens
- */
-public interface ICoin {
+import org.drink.model.Coin;
+
+public interface ICoinLogic {
     public enum Coins {
         TEN_CENT(10),
         TWENTY_CENT(20),
@@ -21,4 +20,10 @@ public interface ICoin {
             return value;
         }
     }
+
+    public void addCoin(Coin coin);
+
+    public void removeCoin(Coin coin);
+
+    public void setCoinSlotEmpty(Coin coin);
 }

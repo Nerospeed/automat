@@ -1,11 +1,11 @@
 package org.drink.model;
 
-import org.drink.interfaces.ICoin;
+import org.drink.coin.ICoinLogic;
 
 /**
  * @author Dennis Martens
  */
-public class Coin implements ICoin {
+public class Coin {
     private int stock = 0;
     private int valueInCent = 0;
 

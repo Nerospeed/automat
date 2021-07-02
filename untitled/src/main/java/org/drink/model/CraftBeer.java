@@ -8,7 +8,7 @@ import java.util.List;
  * @author Dennis Martens
  */
 public class CraftBeer extends Drink implements IDrink {
-    public CraftBeer(List<Integer> changeList, String message) {
-        super(changeList, message);
+    public CraftBeer(List<Integer> changeList, boolean isDrinkBought) {
+        super(changeList,isDrinkBought);
     }
 }

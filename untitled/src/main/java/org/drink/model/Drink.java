@@ -9,19 +9,12 @@ import java.util.List;
  */
 public class Drink implements IDrink {
     private List<Integer> changeList;
-    private String message;
+    private boolean isDrinkBought;
+    private int price;
 
-    public Drink(List<Integer> changeList, String message) {
+    public Drink(List<Integer> changeList, boolean isDrinkBought) {
         this.changeList = changeList;
-        this.message = message;
-    }
-
-    public void setChangeList(List<Integer> changeList) {
-        this.changeList = changeList;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+        this.isDrinkBought = isDrinkBought;
     }
 
     @Override
@@ -30,14 +23,34 @@ public class Drink implements IDrink {
     }
 
     @Override
-    public String getMessage() {
-        return this.message;
+    public boolean isDrinkBought() {
+        return isDrinkBought;
+    }
+
+    @Override
+    public void setChangeList(List<Integer> changeList) {
+        this.changeList = changeList;
+    }
+
+    @Override
+    public void setDrinkBought(boolean drinkBought) {
+        isDrinkBought = drinkBought;
+    }
+
+    @Override
+    public int getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
     public String toString() {
         if (!changeList.isEmpty()) {
-            int a = changeList.stream().mapToInt(Integer:: intValue).sum();
+            int a = changeList.stream().mapToInt(Integer::intValue).sum();
             return String.format("Change Sum is: %s", a);
         }
         return "";

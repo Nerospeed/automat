@@ -1,3 +1,3 @@
 This is a small project from a Automat (Getränkeautomat)
 
-When the project start, the coin slots and the drink bottle slot will be initialized with random count of units.
+When the project start, will be initialized the coin and bottle slot with a random count of units.
